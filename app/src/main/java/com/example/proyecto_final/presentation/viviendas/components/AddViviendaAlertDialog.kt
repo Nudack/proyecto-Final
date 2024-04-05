@@ -159,12 +159,12 @@ fun AddViviendaAlertDialog(
                     Row {
                         IconButton(onClick = { launcher.launch() }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                                painter = painterResource(id = R.drawable.baseline_photo_camera_24),
                                 contentDescription = null)
                         }
                         IconButton(onClick = { launchImage.launch("image/*") }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                                painter = painterResource(id = R.drawable.baseline_image_search_24),
                                 contentDescription = null)
                         }
                     }

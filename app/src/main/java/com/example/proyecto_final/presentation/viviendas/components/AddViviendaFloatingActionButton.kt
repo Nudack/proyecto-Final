@@ -16,7 +16,6 @@ fun AddViviendaFloatingActionButton(
 ) {
     FloatingActionButton(
         onClick = { openDialog() },
-        modifier = Modifier.background(MaterialTheme.colorScheme.primary)
     ) {
         Icon(
             imageVector = Icons.Filled.Add,

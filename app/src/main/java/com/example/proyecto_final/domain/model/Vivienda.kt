@@ -7,8 +7,6 @@ import androidx.room.TypeConverters
 import com.example.proyecto_final.core.BitmapTypeConverter
 import com.example.proyecto_final.core.Constants.Companion.VIVIENDA_TABLE
 
-
-//entidad Casa para las casas que se quieran guardar en la app
 @Entity(tableName = VIVIENDA_TABLE)
 @TypeConverters(BitmapTypeConverter::class)
 data class Vivienda(

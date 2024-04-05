@@ -39,6 +39,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.proyecto_final.R
+import com.example.proyecto_final.core.Constants.Companion.DESCRIPCION
 import com.example.proyecto_final.core.Constants.Companion.NOMBRE
 import com.example.proyecto_final.core.Constants.Companion.TIPO
 import com.example.proyecto_final.core.Constants.Companion.UPDATE
@@ -120,12 +121,12 @@ fun UpdateViviendaContent(
                 .height(8.dp)
         )
         TextField(
-            value = vivienda.nombre,
-            onValueChange = {nombre ->
-                updateNombre(nombre)
+            value = vivienda.descripcion,
+            onValueChange = {descripcion ->
+                updateDescripcion(descripcion)
             },
             placeholder = {
-                Text(text = NOMBRE)
+                Text(text = DESCRIPCION)
             }
         )
         Spacer(
@@ -151,12 +152,12 @@ fun UpdateViviendaContent(
         Row {
             IconButton(onClick = { launcher.launch() }) {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                    painter = painterResource(id = R.drawable.baseline_photo_camera_24),
                     contentDescription = null)
             }
             IconButton(onClick = { launchImage.launch("image/*") }) {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                    painter = painterResource(id = R.drawable.baseline_image_search_24),
                     contentDescription = null)
             }
         }

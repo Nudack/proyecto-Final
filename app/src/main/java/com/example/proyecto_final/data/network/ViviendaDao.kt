@@ -13,13 +13,13 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ViviendaDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(vivienda: Vivienda)
+    suspend fun insertVivienda(vivienda: Vivienda)
 
     @Update
-    suspend fun update(vivienda: Vivienda)
+    suspend fun updateVivienda(vivienda: Vivienda)
 
     @Delete
-    suspend fun delete(vivienda: Vivienda)
+    suspend fun deleteVivienda(vivienda: Vivienda)
 
     @Query("SELECT * FROM $VIVIENDA_TABLE WHERE id = :id")
     fun getVivienda(id: Int): Vivienda

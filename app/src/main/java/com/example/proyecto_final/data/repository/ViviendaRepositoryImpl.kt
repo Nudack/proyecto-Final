@@ -10,7 +10,7 @@ class ViviendaRepositoryImpl (
 ): ViviendaRepository {
     override fun getAllViviendasStream(): Flow<List<Vivienda>> = viviendaDao.getAllViviendas()
     override fun getViviendaStream(id: Int): Vivienda = viviendaDao.getVivienda(id)
-    override suspend fun insertVivienda(vivienda: Vivienda) = viviendaDao.insert(vivienda)
-    override suspend fun deleteVivienda(vivienda: Vivienda) = viviendaDao.delete(vivienda)
-    override suspend fun updateVivienda(vivienda: Vivienda) = viviendaDao.update(vivienda)
+    override suspend fun insertVivienda(vivienda: Vivienda) = viviendaDao.insertVivienda(vivienda)
+    override suspend fun deleteVivienda(vivienda: Vivienda) = viviendaDao.deleteVivienda(vivienda)
+    override suspend fun updateVivienda(vivienda: Vivienda) = viviendaDao.updateVivienda(vivienda)
 }
